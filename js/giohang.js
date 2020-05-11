@@ -16,15 +16,49 @@ function chuyenItemGioHangThanhHTML(sanPham) {
         '               <span class="giagoc">'+sanPham.gia+'</span>  ' +
         '               <span class="giaban">'+sanPham.giaSauKhiGiam()+'</span>  ' +
         '           </div>  ' +
-        '           <input type="number" class="soluong" value="'+sanPham.soLuong+'">  ' +
+        '           <input type="number" class="soluong" value="'+sanPham.soLuong+'" onchange = "thayDoiSoLuong(this ,'+sanPham.ID+')">  ' +
         '           <p class="tongtien">'+sanPham.soLuong*((sanPham.gia *(100- sanPham.phanTramGiamGia))/100)+'</p>  ' +
-        '           <div class="hanhdong">  ' +
+        '           <div class="hanhdong" onclick ="xoaGioHang('+sanPham.ID+')">  ' +
         '               <i class="fas fa-trash"></i>  ' +
         '           </div>  ' +
         '       </div>  ' +
         '  </div>  ';
     return html;
 }
+function xoaGioHang(id){
+    var danhSachGioHang = JSON.parse(localStorage.getItem("danhSachItemGioHang"));
+
+    for (let i = 0; i < danhSachGioHang.length; i++) {
+        if(id == danhSachGioHang[i].ID)
+        danhSachGioHang.splice(i,1);
+    }
+    localStorage.setItem("danhSachItemGioHang",JSON.stringify(danhSachGioHang));
+    document.getElementById('giohang').innerHTML = "";
+    hienThiDS();
+}
+function thayDoiSoLuong(node ,id){
+    console.log(node.value);
+    var danhSachGioHang = JSON.parse(localStorage.getItem("danhSachItemGioHang"));
+    for (let i = 0; i < danhSachGioHang.length; i++) {
+        if(id == danhSachGioHang[i].ID)
+        danhSachGioHang[i].soLuong = node.value;
+    }
+    localStorage.setItem("danhSachItemGioHang",JSON.stringify(danhSachGioHang));
+    document.getElementById('giohang').innerHTML = "";
+    hienThiDS();
+}
+function timSanPhamTheoId(id){
+    var danhSachSanPham = JSON.parse(localStorage.getItem("dssp"));
+    for (let i = 0; i < danhSachSanPham.length; i++) {
+        if(danhSachSanPham[i].ID == id){
+            var sanPham = SanPham(danhSachSanPham[i].hinhAnh , danhSachSanPham[i].ten, danhSachSanPham[i].gia , danhSachSanPham[i].phanTramGiamGia,danhSachSanPham[i].ID);
+            return sanPham;
+        }
+    }
+    
+}
+
+
 function chuyeDanhSachThanhHTML(danhSachItem) {
     var htmlTong='';
     for(var i =0 ; i<danhSachItem.length;i++){
@@ -40,7 +74,6 @@ function hienThiDS() {
     //lấy danh sách item giỏ hàng
     var layDanhSachItem = new Array();
     for (let i = 0; i < danhsachitem.length; i++) {
-        console.log(danhsachitem[i].ID);
         layDanhSachItem.push(xuatSanPhamTheoID(danhsachitem[i].ID));
         layDanhSachItem[(layDanhSachItem.length-1)].soLuong = danhsachitem[i].soLuong;
     }
@@ -49,6 +82,7 @@ function hienThiDS() {
     var HTMl = chuyeDanhSachThanhHTML(layDanhSachItem);
 
     var nodeGioHang = document.getElementById('giohang');
+    
     nodeGioHang.innerHTML= nodeGioHang.innerHTML + HTMl;
 }
 function  xuatSanPhamTheoID(id) {
