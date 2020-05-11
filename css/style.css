@@ -1,0 +1,245 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.thanhTieuDe{
+    width: 100%;
+    height: 50px;
+    background-color: #F2F2F2;
+}
+.thanhTieuDe ul li {
+    float: right;
+    margin-right: 50px;
+    list-style-type: none;
+    margin-top: 15px;
+}
+.thanhTieuDe ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.thanhTieuDe ul li a:hover{
+    color:burlywood;
+}
+.khungMenu{
+    width: 400px;
+    height: 50px;
+    float: right;
+}
+.gioHang{
+    width: 70px;
+    height: 70px;
+    float: right;
+    font-size: 30px;
+    margin-top: 7px;
+}
+.gioHang a{
+    color: black;
+}
+.gioHang a:hover{
+    zoom: 105%;
+    color: red;
+}
+.tenShop{
+    float: left;
+    margin-top: 12px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: coral;
+}
+.slider1{
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+}
+.gioiThieu{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    background-image: url(https://img.thuthuattinhoc.vn/uploads/2019/01/24/hinh-nen-hoa-qua-cute-dep_115834428.jpg);
+    
+}
+.gioiThieu img{
+    width: 800px;
+    height: 500px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 100px;
+}
+.loiNgo{
+    width: 250px;
+    height: 200px;
+    margin-top: 250px;
+    float: right;
+}
+.loiNgo1{
+    font-size: 35px;
+    text-align: left;
+}
+.loiNgo2{
+    font-size: 15px;
+    text-align: left;
+    margin-top: 20px;
+    color: #2E2E2E;
+}
+.vaoShop{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    opacity: 0.8;
+    font-family: futura-lt-w01-book,sans-serif;
+}
+.vaoShop a{
+    text-decoration: none;
+    color: black;
+}
+.vaoShop:hover{
+    background-color: black;
+}
+.vaoShop a:hover{
+    color: white;
+}
+.products{
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.headerProduct{
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+}
+.products h1{
+    font-size: 40px;
+}
+.sanPham{
+    width: 1200px;
+    min-height: 300px;
+    background-color: wheat;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 30px;
+}
+.sp{
+    width: 200px;
+    height: 280px;
+    float: left;
+    margin: 20px;
+    background-color: white;
+    position: relative;
+}
+.chuaImg{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.chuaImg img{
+    width: 100%;
+    height: 100%;
+}
+.themVaoGioHang{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(95, 95, 95);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(50px);
+    transition: .4s;
+}
+.sp:hover .themVaoGioHang{
+    transform: translateY(0px);
+}
+.noiDungSanPham{
+    height: 80px;
+    width: 100%;
+}
+.tenSanPham{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    padding: 12px 0px;
+}
+.giaSanPham{
+    font-weight: bold;
+    color: red;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0px;
+}
+.phanTramGiamGia{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: pink;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+.end-sec{
+    width: 100%;
+    height: 200px;
+    background-color: rosybrown;
+    margin-top: 800px;
+    background-image: url(https://static.wixstatic.com/media/94e66f_5a68ade02699437e927a08a711018158~mv2.png/v1/fill/w_1212,h_312,al_c,q_90,usm_0.66_1.00_0.01/94e66f_5a68ade02699437e927a08a711018158~mv2.webp);
+    background-size: 1200px 200px;
+    
+}
+.ln1{
+    width: 350px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.ln2{
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+.ln3{
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}

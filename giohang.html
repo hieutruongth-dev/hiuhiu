@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị giỏ hàng</title>
+    <link rel="stylesheet" href="css/style-giohang.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="thanhTieuDe">
+    <div class="tenShop">
+        MERINO
+    </div>
+    <div class="khungMenu">
+        <ul>
+            <li><a href="#">WHERE TO BUY</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="index.html" href="#Nodesanpham" >SHOP</a></li>
+            <li><a href="index.html">HOME</a></li>
+        </ul>
+    </div>
+    <div class="gioHang">
+        <a href="giohang.html">
+            <i class="fas fa-shopping-cart">
+
+            </i>
+        </a>
+
+    </div>
+</div>
+<div class="giohang" id="giohang">
+    <h1 class="tieuDe">List Cart</h1>
+    <div class="item-giohang">
+        <div class="hinhanh">
+        </div>
+        <p class="ten">
+            Name Product
+        </p>
+        <div class="gia">
+            Cost
+        </div>
+        <p class="soluong">Quantum</p>
+        <p class="tongtien">Money</p>
+        <div class="hanhdong">
+            Delete
+        </div>
+    </div>
+</div>
+<div class="thongtin-khachhang">
+    <label for="tenKH">Tên khách hàng</label>
+    <input type="text" id="tenKH">
+    <label for="tenKH" class="err" id="loiTen"></label>
+
+    <label for="diaChiKH">Địa chỉ </label>
+    <input type="text" id="diaChiKH">
+    <label for="diaChiKH" class="err" id="loiDiaChi"></label>
+
+    <label for="soDT">Số điện thoại</label>
+    <input type="text" id="soDT">
+    <label for="soDT" class="err" id="loiSDT"></label>
+
+    <label for="mailKH">Email</label>
+    <input type="text" id="mailKH">
+    <label for="mailKH" class="err" id="loiMail"></label>
+    
+    <button class="click" onclick="sendNow()">Send Products</button>
+</div>
+<div class="end-sec1">
+    <div class="ln1">
+        Buy Now To Receive Our Promotion
+    </div>
+    <div class="ln2">
+        FOR SOME HEALTHY TIPS
+    </div>
+    <div class="ln3">
+        Designer By H.T
+    </div>
+</div>
+
+<body>
+
+</body>
+<script src="js/home.js"></script>
+<script src="js/giohang.js"></script>
+
+</html>
